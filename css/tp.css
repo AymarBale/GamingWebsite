@@ -1,0 +1,1217 @@
+/**
+    Déclaration global a toute l'application
+    Cette partie est modifié SEULEMENT APRES avoir communiquer avec les autre membre de l'équipe.
+    --------------------------------------------------------------------------------------------
+**/
+@font-face {
+    font-family: 'Lobster';
+    src: url('../doc/fonts/Lobster-Regular.eot');
+    src: url('../doc/fonts/Lobster-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../doc/fonts/Lobster-Regular.woff2') format('woff2'),
+        url('../doc/fonts/Lobster-Regular.woff') format('woff'),
+        url('../doc/fonts/Lobster-Regular.ttf') format('truetype'),
+        url('../doc/fonts/Lobster-Regular.svg#Lobster-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/** Chargement des polices **/
+
+/** Déclaration du box-sizing **/
+
+/** Sémantique permettant un aspect constant sur toute l'application **/
+
+@keyframes circlebar {
+
+
+    from {
+        opacity: 1;
+    }
+
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes barre {
+
+
+    from {
+        background-color: #8C141E;
+        color: white;
+    }
+
+
+    to {
+        background-color: white;
+        color: #8C141E;
+    }
+}
+
+@keyframes first {
+
+
+    from {
+        width: 0%;
+    }
+
+
+    to {
+        width: 70%
+    }
+}
+
+body {
+    margin: 0px;
+    position: relative;
+}
+
+
+
+header {
+    z-index: 1000;
+    position: fixed;
+    right: 0px;
+}
+
+header>nav {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+header>nav>:nth-child(2) {
+    background-color: white;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+header>nav input {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+header nav .desktop-menu {
+    display: none;
+}
+
+header nav input:checked~.desktop-menu {
+    display: block;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    background-color: #8C141E;
+    border-radius: 30px;
+}
+
+header nav .mobile-menu>:nth-child(n) {
+    border: 2px solid #262626;
+    visibility: hidden;
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 0px 5px 5px 13px;
+    background-color: #262626;
+}
+
+header nav .mobile-menu>:nth-child(3) {
+    visibility: visible;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Lobster';
+}
+
+header nav a:hover {
+    animation-name: barre;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    background-color: white;
+    color: #8C141E;
+
+}
+
+.desktop-menu+ul {
+    background: linear-gradient(0.25turn, #ee2d3d, #8C141E);
+    border-radius: 20px;
+}
+
+.desktop-menu+ul {
+    animation-name: first;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    display: none;
+    height: 60px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+
+}
+
+header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (min-width:992px) {
+    header>nav>input[type="checkbox"] {
+        display: none;
+    }
+
+    .desktop-menu+ul {
+        display: inline-block;
+    }
+
+    header>nav>:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        background-color: #262626;
+        border-radius: 10px;
+        vertical-align: bottom;
+        position: absolute;
+        animation-name: circlebar;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        opacity: 0;
+    }
+
+}
+
+
+footer {
+    background-color: #262626;
+}
+
+
+footer #letters {
+    width: 30%;
+    display: inline-block;
+}
+
+footer #links {
+    width: 30%;
+    display: inline-block;
+}
+
+
+
+footer p {
+    font-family: monospace;
+    text-align: center;
+}
+
+footer #letters>div>:nth-child(1), footer #letters>div>:nth-child(2), footer #letters>div>:nth-child(3) {
+    color: white;
+}
+
+footer #letters>div>:nth-child(4) {
+    color: orangered;
+}
+
+
+
+footer .maps>div {}
+
+footer iframe {
+    width: 300px;
+    height: 120px;
+    border-radius: 20px;
+    border: 2px solid orangered;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width:992px) {
+    footer img {
+        width: 90px;
+    }
+
+    footer #maps {
+        width: calc(100% - 61%);
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    footer img {
+        display: none;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    #maps>div {
+        width: fit-content;
+    }
+
+    #maps {
+        width: 304px;
+        margin: auto;
+    }
+
+    #letters {
+        margin: auto;
+    }
+}
+
+/**
+    Déclaration spécifique a chaque page au besoin.
+    Chaque personne travaille sur une page à la fois donc il ne devrait jamais y avoir de conflit.
+
+    2 examples: home et contact
+    --------------------------------------------------------------------------------------------
+**/
+
+
+
+/**
+    Déclaration des media query pour chaque taille.
+    --------------------------------------------------------------------------------------------
+**/
+
+@media only screen and (min-width:768px) {
+    .catalogue .popular_games {
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .catalogue .popular_games {
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .catalogue .popular_games {
+        height: 600px;
+    }
+}
+
+/**
+
+
+    catalogue
+    --------------------------------------------------------------------------------------------
+**/
+
+@keyframes hover_increase {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+
+    15% {
+        left: 0%;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    /* chaque image est déplacée de 100% vers la gauche du conteneur */
+    35% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    55% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    80% {
+        left: -400%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
+
+.catalogue {
+    background-color: #272727;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+
+.catalogue .topimg {
+    position: relative;
+    overflow: hidden;
+}
+
+.catalogue .topimg img {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.catalogue .topimg>:nth-child(2) {
+    rotate: 4.5deg;
+    background-color: #272727;
+    width: 102%;
+    height: 155px;
+    left: -10px;
+    position: absolute;
+    bottom: -88px;
+}
+
+.catalogue .topimg>:nth-child(3) {
+    position: absolute;
+    top: 25%;
+    color: white;
+    left: 10%;
+    background: #1f7bc7;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: monospace;
+}
+
+.catalogue .topimg>:nth-child(4) {
+    position: absolute;
+    top: 45%;
+    color: #1f7bc7;
+    left: 10%;
+    background: white;
+    padding: 10px;
+
+    font-family: fantasy;
+}
+
+.catalogue .game_types>p {
+    background-color: #272727;
+    color: white;
+    font-size: 24px;
+}
+
+.catalogue .scroolbar {
+    overflow: hidden;
+}
+
+.catalogue h1 {
+    font-family: 'Lobster';
+    color: #f5e9e9;
+    margin-left: 10px;
+
+}
+
+.catalogue nav {
+    background: #1a1919;
+    width: fit-content;
+    margin: auto;
+    border-radius: 30px;
+}
+
+.catalogue ul {
+
+    display: flex;
+    padding: 0px;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.catalogue li {
+    display: inline-block;
+}
+
+.catalogue ul>:nth-child(n)>a {
+
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    margin: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.catalogue ul>:nth-child(1)>a {
+    border-radius: 30px 5px 5px 30px;
+}
+
+.catalogue ul>:nth-child(2)>a, ul>:nth-child(3)>a {
+    border-radius: 5px;
+}
+
+.catalogue ul>:nth-child(4)>a {
+    border-radius: 5px 30px 30px 5px;
+}
+
+.catalogue ul>:nth-child(n)>a:hover {
+    background-color: rgb(255, 68, 0);
+}
+
+.catalogue .cover-scroller {
+    margin-bottom: 200px;
+    width: 100%;
+    height: 270px;
+    text-align: center;
+    background: linear-gradient(rgb(179, 171, 171), orangered);
+}
+
+.catalogue .cover-scroller>:nth-child(1) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.catalogue .wrap-collabsible {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+
+}
+
+.catalogue .popular_games .wrap-collabsible {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+    grid-column: 1;
+    z-index: 1000;
+}
+
+
+.catalogue input[type='checkbox'] {
+    display: none;
+}
+
+.catalogue .lbl-toggle {
+    display: block;
+
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+
+
+    color: #A77B0E;
+    background: #FAE042;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+}
+
+.catalogue .lbl-toggle:hover {
+    color: #7C5A0B;
+}
+
+.catalogue .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.catalogue .toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.catalogue .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.catalogue .toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 100vh;
+}
+
+.catalogue .toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.catalogue .collapsible-content .content-inner {
+    background: rgba(250, 224, 66, .2);
+    border-bottom: 1px solid rgba(250, 224, 66, .45);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: .5rem 1rem;
+}
+
+.catalogue .game_cover {
+    display: inline-block;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 15px;
+
+}
+
+.catalogue .game_cover>figure>a>img {
+    width: 20vw;
+    min-width: 142px;
+    max-width: 246px;
+    border-radius: 20px;
+    margin: 0px;
+}
+
+.catalogue figure>a>:nth-child(2) {
+    margin-left: 10px;
+    color: white;
+    font-family: monospace;
+    font-size: 22px;
+
+}
+
+.catalogue .game_cover>figure {
+    margin: 0px;
+}
+
+.catalogue .game_cover>figure>figcaption {
+    text-align: left;
+    font-family: "Lobster";
+    color: white;
+}
+
+.catalogue .game_cover:hover {
+    animation-duration: 1s;
+    animation-name: hover_increase;
+    animation-iteration-count: 1;
+    transform: scale(1.1);
+}
+
+.catalogue .popular_games {
+
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(0.25turn, rgba(0, 26, 255, 0), rgb(92, 92, 92, 0.966), rgb(92, 92, 92, 1)), url("../catalogue/images/bestsellers/bestsellerbackround.jpg");
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.catalogue .character {
+    grid-column: 1;
+    text-align: center;
+}
+
+.catalogue .character>img {
+    width: 50%;
+    grid-column: 1;
+    max-width: 305px;
+    max-height: 392px;
+}
+
+.catalogue .character>h1 {
+    text-align: center;
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    border-radius: 10px;
+    color: #272727;
+
+}
+
+.catalogue .games {
+    grid-column: 2;
+
+}
+
+.catalogue .popular_games>:nth-child(2) {
+    height: 100%;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.catalogue .carousels {
+
+    height: fit-content;
+    margin: auto;
+    overflow: hidden;
+    border: 5px solid #272727;
+}
+
+.catalogue .carousels #slider-containers {
+    position: relative;
+    width: 500%;
+    animation: 10s slide infinite;
+}
+
+.catalogue .carousels #slider-containers img {
+    width: 10%;
+    float: left;
+}
+
+.catalogue .lastpart {
+    background-color: rgb(92, 92, 92, 0.966);
+}
+
+
+
+
+/**
+
+
+    Details
+    --------------------------------------------------------------------------------------------
+**/
+
+/* General Styles */
+
+/* Checkbox Styles */
+.details input[type='checkbox'] {
+    display: none;
+}
+
+
+/* Collapsible Styles */
+.details .wrap-collabsible {
+    margin: 1.2rem 0;
+}
+
+.details .lbl-toggle {
+    display: block;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    color: #DDD;
+    background: #0069ff;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.25s ease-out;
+    width: 60%;
+
+
+}
+
+.details .lbl-toggle:hover {
+    color: #FFF;
+}
+
+.details .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.details .toggle:checked+.lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+
+.details .collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.details .toggle:checked+.lbl-toggle+.collapsible-content {
+    max-height: 350px;
+}
+
+.details .toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.details .collapsible-content p {
+    margin-bottom: 0;
+}
+
+/* Layout Styles */
+body .details {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../details/maquette/nature.jpg);
+    background-attachment: fixed;
+}
+
+.details {
+    /* background-color: #272727; */
+    width: 100%;
+    /* height: 100%; */
+    margin: 0px;
+    /* display: grid; */
+    /* grid-template-areas: "header""main""aside"; */
+}
+
+.details img {
+    height: 200px;
+}
+
+.details .vid {
+    margin: 10px;
+    width: 500px;
+    float: left;
+    padding: 5px;
+
+}
+
+.details .presentation {
+    float: right;
+    margin-left: 36px;
+    margin-top: 5px;
+    width: 740px;
+    text-align: left;
+}
+
+.details .presentation .imag img {
+    /* float: right;
+    width: 20%;
+    height: 450px;
+    object-position: right top; */
+    margin-bottom: -20px;
+    text-align: center;
+    height: auto;
+}
+
+.details .image {
+    text-align: center;
+}
+
+.details .image ul {
+    display: flex;
+
+}
+
+.details .scroll {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.details .scroll ul li img {
+    max-width: 100%;
+    min-width: 100px;
+}
+
+.details .scroll ul li img:hover {
+    opacity: 1;
+
+    transform: scaleX(1.5) scaleY(3);
+
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+    /* Styles for screens with minimum width of 768px */
+}
+
+@media only screen and (min-width: 992px) {
+    /* Styles for screens with minimum width of 992px */
+}
+
+/**
+    Déclaration des media query pour chaque taille.
+    --------------------------------------------------------------------------------------------
+**/
+
+@media only screen and (min-width:768px) {}
+
+@media only screen and (min-width:992px) {}
+
+
+
+
+/**
+    Accueil
+    --------------------------------------------------------------------------------------------
+**/
+
+.home main {
+    background-color: #262626;
+    overflow-x: hidden;
+}
+
+.video-fullw {
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/Accuel_video_img_1920x1080.jpg);
+}
+
+.video-fullw>video {
+    max-width: 80%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.home .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    background-color: #262626;
+    padding: 20px;
+}
+
+
+.home .content-section .grid-item:hover {
+    transform: scale(1.5);
+}
+
+.home h1 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f28b30;
+    text-align: center;
+    font-size: 60px;
+}
+
+.home .text-image-section {
+    align-items: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom right, #262626, #f28b30);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 0px 300px;
+}
+
+.home .text {
+    color: white;
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    font-size: 18px;
+    max-width: 400px;
+}
+
+.home .image {
+    flex: 1;
+    height: 100%;
+}
+
+.home .full-image {
+    width: 100%;
+    max-height: 500px;
+    padding: 50px;
+}
+
+.grid-item>img {
+    border-radius: 30px;
+}
+
+.home .full-image video {
+    height: 100%;
+}
+
+.home .carousel-section {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/BG.png");
+}
+
+#slider-container {
+    max-height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@keyframes carousel-section {
+    0%, 10% {
+        transform: translate(0, 0px);
+    }
+
+    20% {
+        transform: translate(0, -100px);
+    }
+
+    30% {
+        transform: translate(0, -150px);
+    }
+
+    40% {
+        transform: translate(0, -200px);
+    }
+
+    50% {
+        transform: translate(0, -250px);
+    }
+
+    60% {
+        transform: translate(0, -400px);
+    }
+
+    70% {
+        transform: translate(0, -650px);
+    }
+
+    80% {
+        transform: translate(0, -800px);
+    }
+
+    100% {
+        transform: translate(0, -1200px);
+    }
+}
+
+#slider-container img {
+    max-width: auto;
+    height: 100%;
+    animation-name: carousel-section;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (min-width:992px) {
+    .home .text-image-section {
+        display: flex;
+    }
+}
+
+/**
+    Contact
+    --------------------------------------------------------------------------------------------
+**/
+@keyframes background-move {
+    0% {
+        background-image: url(../contact/images/contact-img.jpg);
+    }
+
+    50% {
+        background-image: url(../contact/images/contact-img2.jpg);
+    }
+
+    100% {
+        background-image: url(../contact/images/contact-img3.jpg);
+    }
+}
+
+@keyframes subutton {
+    from {
+        background-color: #82bf45;
+    }
+
+    to {
+        background-color: #F28B30;
+    }
+}
+
+@keyframes changelabel {
+    from {
+        border: 1px solid #82bf45;
+    }
+
+    to {
+        border: 1px solid #0b7988;
+    }
+}
+
+.contact .contact-section {
+    display: inline-block;
+    height: 100%;
+    background: linear-gradient(#BF1B28, #262626);
+}
+
+.contact .contact-section>h1 {
+    font-family: 'Lobster';
+    margin: 5px;
+    color: #262626;
+}
+
+.contact-section form {
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+.contact-section label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Lobster';
+
+}
+
+.contact input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover {
+    animation-duration: 0.5s;
+    animation-name: changelabel;
+    animation-iteration-count: 1;
+    border: 1px solid #F28B30;
+}
+
+.contact input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+.contact-section textarea {
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-section button {
+    display: inline-block;
+    width: 50%;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #82bf45;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contact input[type="checkbox"] {
+    display: inline;
+}
+
+.contact-section button:hover {
+    animation-duration: 0.5s;
+    animation-name: subutton;
+    animation-iteration-count: 1;
+    background-color: #F28B30;
+}
+
+.contact {
+    background-color: #0c0b0b;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.contact form>label+div {
+    display: inline-block;
+}
+
+.contact form>label+div+div {
+    display: inline-block;
+}
+
+.contact form>label+div+div+label {
+    display: inline-block;
+}
+
+.contact form>label+div+div+label+label {
+    display: inline-block;
+}
+
+@media only screen and (min-width:768px) {
+    .contact main {
+        background-image: none;
+
+    }
+
+    .contact-section form {}
+
+    .contact .contact-section {
+        width: 100%;
+        border-radius: 30px 30px 30px 30px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .contact main {
+        height: 100vh;
+        animation-duration: 10s;
+        animation-name: background-move;
+        animation-iteration-count: 1;
+        background-image: url(../contact/images/contact-img3.jpg);
+
+    }
+
+    .contact .contact-section {
+        width: 50%;
+        border-radius: 0px 30px 30px 0px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .contact main {
+
+        background-image: none;
+    }
+
+    .contact body {}
+
+    .contact-section form {
+        text-align: center;
+
+    }
+
+    .contact .contact-section {
+        width: 100%;
+        border-radius: 30px 30px 30px 30px;
+
+    }
+}

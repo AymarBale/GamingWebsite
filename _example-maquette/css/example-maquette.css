@@ -1,0 +1,72 @@
+/**
+    Déclaration global a toute l'application
+    Cette partie est modifié SEULEMENT APRES avoir communiquer avec les autre membre de l'équipe.
+    --------------------------------------------------------------------------------------------
+**/
+
+/** Chargement des polices **/
+
+/** Déclaration du box-sizing **/
+
+/** Sémantique permettant un aspect constant sur toute l'application **/
+
+header {}
+
+nav {}
+
+aside {}
+
+main {}
+
+footer {}
+
+/**
+    Déclaration spécifique a chaque page au besoin.
+    Chaque personne travaille sur une page à la fois donc il ne devrait jamais y avoir de conflit.
+
+    2 examples: home et contact
+    --------------------------------------------------------------------------------------------
+**/
+
+/** Example pour les cas spécifiques de la page home **/
+
+.home header {}
+
+.home nav {}
+
+.home aside {}
+
+.home main {}
+
+.home main .carousel {
+    /** Spécifique pour l'intégration du carousel de la page home **/
+    border: 2px solid red;
+}
+
+.home footer {}
+
+/** Example pour les cas spécifiques de la page contact **/
+
+.contact header {}
+
+.contact nav {}
+
+.contact aside {}
+
+.contact main {}
+
+.contact main form {
+    /** Spécifique pour l'intégration du formulaire de contact **/
+    border: 2px solid black;
+}
+
+.contact footer {}
+
+/**
+    Déclaration des media query pour chaque taille.
+    --------------------------------------------------------------------------------------------
+**/
+
+@media only screen and (min-width:768px) {}
+
+@media only screen and (min-width:992px) {}

@@ -1,0 +1,1 @@
+Contient les images qui peuvent être utilisées dans tous les sections de l'application.

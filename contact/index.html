@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/tp.css">
+</head>
+
+<body class="contact">
+
+    <header>
+        <nav>
+            <input type="checkbox" />
+
+            <div class="mobile-menu">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+
+            <div class="desktop-menu">
+                <span>
+                    <a href="../index.html">Accueil</a>
+                </span>
+                <span>
+                    <a href="../catalogue/index.html">Catalogue</a>
+                </span>
+                <span>
+                    <a href="../contact/index.html">Contact</a>
+                </span>
+
+            </div>
+
+            <ul>
+                <li class="lien"><a href="../index.html">Accueil</a></li>
+                <li class="lien"><a href="../catalogue/index.html">Catalogue</a></li>
+                <li class="lien"><a href="../contact/index.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <nav>
+
+    </nav>
+    <aside>
+
+    </aside>
+    <main>
+
+
+        <div class="contact-section">
+            <h1>Tell us about you</h1>
+            <form action="inscription.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required autofocus placeholder="Entrez votre nom">
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required
+                    placeholder="Entrez votre numéro de téléphone (10 chiffres)">
+
+                <label for="nombre">Nombre :</label>
+                <input type="number" id="nombre" name="nombre" max="50" min="0">
+
+                <label for="courriel">Courriel :</label>
+                <input type="email" id="courriel" name="courriel" required placeholder="Entrez votre adresse e-mail">
+
+                <label for="options">Options :</label>
+                <input type="text" id="options" name="options" list="options-list">
+                <datalist id="options-list">
+                    <option value="Option 1"></option>
+                    <option value="Option 2"></option>
+                    <option value="Option 3"></option>
+                </datalist>
+
+                <label>Choix :</label>
+                <div>
+                    <label for="choix1">Choix 1</label>
+                    <input type="radio" id="choix1" name="choix" value="choix1">
+
+                </div>
+                <div>
+                    <label for="choix2">Choix 2</label>
+                    <input type="radio" id="choix2" name="choix" value="choix2">
+
+                </div>
+
+                <label>
+                    <input type="checkbox" name="case1" value="case1">
+                    Case 1
+                </label>
+                <label>
+                    <input type="checkbox" name="case2" value="case2">
+                    Case 2
+                </label>
+
+                <label for="commentaire">Commentaire :</label>
+                <textarea id="commentaire" name="commentaire" rows="4"></textarea>
+
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+
+        <div class="imag">
+        </div>
+
+
+    </main>
+    <footer>
+        <div id="letters">
+            <div>
+                <p>Terms of use</p>
+                <p>Privacy</p>
+                <p>Police</p>
+                <p>FAQ</p>
+            </div>
+
+        </div>
+        <div id="links">
+            <a href="https://www.facebook.com/"><img src="../images/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/"><img src="../images/instagram.png" alt=""></a>
+            <a href="https://twitter.com/"><img src="../images/twitter.png" alt=""></a>
+        </div>
+        <div id="maps">
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2794.3096897131527!2d-73.64501122469657!3d45.54409532810572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDMyJzM4LjciTiA3M8KwMzgnMzIuOCJX!5e0!3m2!1sfr!2sca!4v1686807541014!5m2!1sfr!2sca"></iframe>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

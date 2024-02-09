@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tp.css">
+    <title>Details</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <input type="checkbox" />
+
+            <div class="mobile-menu">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+
+            <div class="desktop-menu">
+                <span>
+                    <a href="../index.html">Accueil</a>
+                </span>
+                <span>
+                    <a href="../catalogue/index.html">Catalogue</a>
+                </span>
+                <span>
+                    <a href="../contact/index.html">Contact</a>
+                </span>
+
+            </div>
+
+            <ul>
+                <li class="lien"><a href="../index.html">Accueil</a></li>
+                <li class="lien"><a href="../catalogue/index.html">Catalogue</a></li>
+                <li class="lien"><a href="../contact/index.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+
+        <div class="details">
+
+            <div class="vid">
+                <video controls muted width="400" height="300" poster="image/video.png">
+                    <source src="../details/video/video-exemple.mp4" type="video/mp4">
+                    <source src="../details/video/video-exemple.webm" type="video/webm">
+
+                    <object type="application/x-shockwave-flash" width="400" height="300">
+                        <param name="movie" value="video/video-exemple.mp4">
+                        <param name="wmode" value="transparent">
+                        Vous n'avez pas de navigateur moderne, ni de plugin Flash installé
+                        qui permette la reproduction de ce fichier vidéo.
+                        Vous pouvez télécharger <a href="https://www.google.com/chrome/">Google Chrome</a>
+                        qui est compatible avec la reproduction de fichiers audio et vidéo.
+                    </object>
+                </video>
+            </div>
+
+
+            <div class="presentation">
+                <figure class="imag">
+                    <img src="../details/maquette/image4.png" alt="cat 1">
+                </figure>
+                <input id="collapsible" class="toggle" type="checkbox">
+                <label for="collapsible" class="lbl-toggle">INfo du jeu</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+
+                        <span>Nom</span>
+                        <ul>
+                            <li>$prix</li>
+                            <li>Caractéristique A</li>
+                            <li>Caractéristique B</li>
+                            <li>Caractéristique C</li>
+                        </ul>
+
+                        <p>Une aventure épique à travers les terres et les cieux d'Hyrule vous attend
+                            dans le
+                            jeu Legend of
+                            Zelda™:
+                            Tears of the Kingdom pour la console Nintendo Switch™.
+                            L'aventure est à vous de créer dans un monde alimenté par votre imagination.</p>
+                        <div class="buttons">
+                            <input type="button" value="ajouter à la carte">
+                            <input type="button" value="favoris">
+                        </div>
+                        <p>Aimez-vous le jeu?</p>
+                        <div>
+                            <label for="oui">Oui</label>
+                            <input type="radio" id="oui" name="source" value="Oui">
+                        </div>
+                        <div>
+                            <label for="non">Non</label>
+                            <input type="radio" id="non" name="source" value="Non">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="image">
+                <figure>
+                    <img src="../details/maquette/image2.png" alt="cat 1">
+                </figure>
+            </div>
+            <div class="scroll">
+                <ul>
+                    <li><img src="../details/maquette/image1.png" alt="cat 1"></li>
+                    <li><img src="../details/maquette/image2.png" alt="cat 2"></li>
+                    <li><img src="../details/maquette/image3.png" alt="cat 3"></li>
+                    <li><img src="../details/maquette/image4.png" alt="cat 4"></li>
+                    <li><img src="../details/maquette/image1.png" alt="cat 5"></li>
+                    <li><img src="../details/maquette/image3.png" alt="cat 6"></li>
+                    <li><img src="../details/maquette/image5.png" alt="cat 7"></li>
+                    <li><img src="../details/maquette/image4.png" alt="cat 8"></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+    </main>
+    <footer>
+        <div id="letters">
+            <div>
+                <p>Terms of use</p>
+                <p>Privacy</p>
+                <p>Police</p>
+                <p>FAQ</p>
+            </div>
+
+        </div>
+        <div id="links">
+            <a href="https://www.facebook.com/"><img src="../images/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/"><img src="../images/instagram.png" alt=""></a>
+            <a href="https://twitter.com/"><img src="../images/twitter.png" alt=""></a>
+        </div>
+        <div id="maps">
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2794.3096897131527!2d-73.64501122469657!3d45.54409532810572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDMyJzM4LjciTiA3M8KwMzgnMzIuOCJX!5e0!3m2!1sfr!2sca!4v1686807541014!5m2!1sfr!2sca"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
